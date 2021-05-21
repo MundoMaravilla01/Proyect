@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect.MainPage" Title="Bienvenidos" 
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout>
+        <Frame BackgroundColor="White" Padding="0" CornerRadius="5">
+            <Image Source="usuario." />
+
+        </Frame>
+        <Label HorizontalOptions="Center" FontSize="30">Ingrese a su cuenta</Label>
+        <Label HorizontalOptions="Center" FontSize="15">Ingrese sus credneciales a continuación</Label>
+       
+        <StackLayout Grid.Row="4" Padding="25,50">
+             
+            <Entry Placeholder="nombre de usuario" TextColor="Gray" x:Name ="txtUsuario"  />
+            <Entry Placeholder="Contraseña" IsPassword="True" x:Name ="txtPassword" TextColor="Gray"/>
+
+            
+                <Button Text="Iniciar Sesión" Grid.Row="50" Grid.ColumnSpan="50" CornerRadius="5" Clicked="Button_Clicked"/>
+                <Label Text="" x:Name="lblResultado" TextColor="red" HorizontalOptions="Center"/>
+
+                <Button Text="Registrarse" Grid.Row="50" Grid.ColumnSpan="50" CornerRadius="5" x:Name="btnRegistrarse" Clicked="btnRegistrarse_Clicked"/>
+                <Label Text="" x:Name="lblRegistros" TextColor="red" HorizontalOptions="Center"/>
+
+
+            
+
+
+        </StackLayout>
+
+        
+        <!--<StackLayout Grid.Row="4" Padding="10,10">
+
+            
+            <ListView x:Name="MyListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label x:Name="lblnombre" Text="{Binding nombre}"></Label>
+                                <Label x:Name="lblapellido" Text="{Binding apellido}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>-->
+
+    </StackLayout>
+   
+    
+</ContentPage>

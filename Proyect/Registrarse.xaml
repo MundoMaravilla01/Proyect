@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect.Registrarse" Title="Formulario de Registro" >
+    <ScrollView>
+        <StackLayout>
+            <Label Text=""/>
+
+
+            <Entry x:Name="txtusuario" Placeholder="usuario"/>
+            <Entry x:Name="txtpassword" Placeholder="password"/>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Grid.Row="0" Grid.Column="0" 
+                        x:Name="btnInsertar" 
+                        Text="Insertar" 
+                        Clicked="btnInsertar_Clicked"/>
+                <Button Grid.Row="2" Grid.Column="1" 
+                        Text="Regresar" 
+                        x:Name="btnRegresar" 
+                        Clicked="btnRegresar_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="0" 
+                        Text="Eliminar" 
+                        x:Name="btnEliminar" 
+                        Clicked="btnEliminar_Clicked"/>
+                <Button Grid.Row="1" Grid.Column="1" 
+                        Text="limpiar" 
+                        x:Name="btnLimpiar" 
+                        Clicked="btnLimpiar_Clicked"/>
+               
+                <Button Grid.Row="0" Grid.Column="1" 
+                        Text="Consultar" 
+                        x:Name="btnGet" 
+                        Clicked="btnGet_Clicked"/>
+
+            </Grid>
+        </StackLayout>
+
+
+
+
+    </ScrollView>
+</ContentPage>

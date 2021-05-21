@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyect.FormularioLogin" Title="Cliente"
+             NavigationPage.HasNavigationBar="False"   BackgroundColor="Bisque"  >
+    <StackLayout>
+        <Label Text="Consumir GeT" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Label x:Name="texto" Text=""/>
+        
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout >
+                           <Grid  BackgroundColor="Bisque">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="0.5"/>
+                                    
+                                   
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions >
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    
+                                    
+                                </Grid.ColumnDefinitions>
+                                <Label TextColor="Black" Grid.Row="2"  Grid.Column="0" x:Name="lblcodigo" Text="{Binding codigo}"/>
+                                <Label TextColor="Black" Grid.Row="2"  Grid.Column="1" x:Name="lblnombre" Text="{Binding nombre}"/>
+                                <Label TextColor="Black" Grid.Row="2"  Grid.Column="2" x:Name="lblapellido" Text="{Binding apellido}"/>
+                                <Label TextColor="Black" Grid.Row="2"  Grid.Column="3" x:Name="lbledad" Text="{Binding edad}"/>
+                         </Grid>
+                           
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+               
+            </ListView.ItemTemplate>
+            
+        </ListView>
+
+        <Grid  BackgroundColor="Bisque">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0.5"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+
+
+
+         <Button  Grid.Row="4" Grid.Column="1" 
+                 TextColor="Black"
+                 BackgroundColor="Bisque"
+                 BorderColor="Black"
+                  BorderWidth="7"
+                  CornerRadius="25"
+                  WidthRequest="20"
+                  HeightRequest="75"                
+                        x:Name="btnGet" 
+                        Text="Consultar" 
+                        Clicked="btnGet_Clicked"/>
+
+        <Button  Grid.Row="0" Grid.Column="1"
+                 TextColor="Black"
+                 BackgroundColor="Bisque"
+                 BorderColor="Black"
+                  BorderWidth="7"
+                  CornerRadius="25"
+                  WidthRequest="20"
+                  HeightRequest="75"
+                        x:Name="btnInsertar" 
+                        Text="Insertar" 
+                        Clicked="btnInsertar_Clicked"/>
+
+        <Button Grid.Row="2" Grid.Column="1" 
+                TextColor="Black"
+                 BackgroundColor="Bisque"
+                 BorderColor="Black"
+                  BorderWidth="7"
+                  CornerRadius="25"
+                  WidthRequest="20"
+                  HeightRequest="75"
+                        x:Name="btnRegresar"
+                        Text="Regresar"
+                        Clicked="btnRegresar_Clicked"/>
+   </Grid>
+    </StackLayout>
+     
+</ContentPage>
+
